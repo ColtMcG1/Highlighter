@@ -1,4 +1,5 @@
-﻿using Microsoft.Office.Tools.Ribbon;
+﻿using Highlighter.Properties;
+using Microsoft.Office.Tools.Ribbon;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -10,7 +11,6 @@ namespace Highlighter
 
     public partial class Ribbon
     {
-        public static Color color;
         public static bool toggled = false;
         private void Ribbon_Load(object sender, RibbonUIEventArgs e)
         {
@@ -22,7 +22,12 @@ namespace Highlighter
         {
             if (this.colorDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                color = this.colorDialog1.Color;
+                if (!toggled)
+                {
+                    this.Toggle.Checked = true;
+                    toggled = true;
+                }
+                Settings.Default.Color = this.colorDialog1.Color;
                 HighlighterWork.highlightCell();
             }
         }

@@ -36,8 +36,8 @@
         {
             this.Highlighter = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
-            this.Toggle = this.Factory.CreateRibbonToggleButton();
             this.group2 = this.Factory.CreateRibbonGroup();
+            this.Toggle = this.Factory.CreateRibbonToggleButton();
             this.Color = this.Factory.CreateRibbonButton();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.Highlighter.SuspendLayout();
@@ -59,29 +59,35 @@
             this.group1.Label = "Toggle";
             this.group1.Name = "group1";
             // 
-            // Toggle
-            // 
-            this.Toggle.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.Toggle.Label = "Highlight";
-            this.Toggle.Name = "Toggle";
-            this.Toggle.ShowImage = true;
-            // 
             // group2
             // 
             this.group2.Items.Add(this.Color);
             this.group2.Label = "Color";
             this.group2.Name = "group2";
             // 
+            // Toggle
+            // 
+            this.Toggle.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.Toggle.Image = global::Highlighter.Properties.Resources.highlighter;
+            this.Toggle.ImageName = "<a href=\"https://www.flaticon.com/free-icons/highlighter\" title=\"highlighter icon" +
+    "s\">Highlighter icons created by Freepik - Flaticon</a>";
+            this.Toggle.Label = "Highlight";
+            this.Toggle.Name = "Toggle";
+            this.Toggle.ShowImage = true;
+            // 
             // Color
             // 
             this.Color.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.Color.Image = global::Highlighter.Properties.Resources.paint_brush;
+            this.Color.ImageName = "<a href=\"https://www.flaticon.com/free-icons/paint\" title=\"paint icons\">Paint ico" +
+    "ns created by Nikita Golubev - Flaticon</a>";
             this.Color.Label = "Color";
             this.Color.Name = "Color";
             this.Color.ShowImage = true;
             // 
             // colorDialog1
             // 
-            this.colorDialog1.Color = System.Drawing.Color.IndianRed;
+            this.colorDialog1.Color = global::Highlighter.Properties.Settings.Default.Color;
             // 
             // Ribbon
             // 

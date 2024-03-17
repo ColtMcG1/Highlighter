@@ -8,6 +8,7 @@ using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Excel;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Excel;
+using Highlighter.Properties;
 
 namespace Highlighter
 {
@@ -50,7 +51,7 @@ namespace Highlighter
             lastCell = range.Address;
             lastFormat = range.Interior.Color;
 
-            range.Interior.Color = System.Drawing.ColorTranslator.ToOle(Ribbon.color);
+            range.Interior.Color = System.Drawing.ColorTranslator.ToOle(Settings.Default.Color);
         }
 
         private void Application_SheetSelectionChange(object Sh, Excel.Range Target)
@@ -72,6 +73,7 @@ namespace Highlighter
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
         {
+            Settings.Default.Save();
         }
 
         #region VSTO generated code
