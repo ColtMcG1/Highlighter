@@ -21,4 +21,5 @@ You can change the color of the cursor by clicking the `Color` button in the rib
 
 # Attributions
 <a href="https://www.flaticon.com/free-icons/highlighter" title="highlighter icons">Highlighter icons created by Freepik - Flaticon</a>
+<br>
 <a href="https://www.flaticon.com/free-icons/paint" title="paint icons">Paint icons created by Nikita Golubev - Flaticon</a>
