@@ -2,7 +2,7 @@
   Highlighter
 </h1>
 
-<img src="https://img.shields.io/github/release/premake/premake-core/all.svg" alt="Latest release" />
+<img src="https://img.shields.io/github/release/ColtMcG1/Highlighter/all.svg" alt="Latest release" />
 
 # Installation
 1. Right-click and select properties.
