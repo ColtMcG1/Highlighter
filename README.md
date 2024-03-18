@@ -12,7 +12,7 @@
 5. If you have an error that the .NET version is already installed. Run the VSTO file.
 
 # Using Highlighter
-![image](https://github.com/ColtMcG1/Highlighter/assets/76269687/3e9e56ef-ded8-4cb5-8019-576a7da14e07)
+![image](https://github.com/ColtMcG1/Highlighter/assets/76269687/4aea3a82-29df-40d1-9194-044411c7afde)
 Highlighter will appear in the ribbon.
 
 To turn highlighter on click the `Toggle` button in the ribbon.
