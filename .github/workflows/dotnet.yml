@@ -12,17 +12,19 @@ on:
 jobs:
   build:
 
-    runs-on: windows-2022
+    runs-on: windows-2019
 
     steps:
     - uses: actions/checkout@v4
+
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v2
+  
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 4.8.x
-    - name: Restore dependencies
-      run: dotnet restore
+        dotnet-version: 4.8.1
+        cache: true
+        
     - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: msbuild Highlighter.sln -t:rebuild -verbosity:diag -property:Configuration=Release
