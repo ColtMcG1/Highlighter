@@ -43,9 +43,8 @@ jobs:
         New-Item -ItemType directory -Path certificate
         Set-Content -Path Highlighter.Key.txt -Value '${{ secrets.CERTIFICATE }}'
         certutil -decode Highlighter.Key.txt Highlighter.Key.pfx
-        & "C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\sn.exe" -i Highlighter.Key.pfx VS_KEY_D1B93F294121F939 
  
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} /p:PackageCertificateKeyFile=Highlighter.Key.pfx /p:PackageCertificatePassword=${{ secrets.CERTIFICATE_PASS }} ${{env.SOLUTION_FILE_PATH}} 
+      run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} /p:Password=${{ secrets.CERTIFICATE_PASS }} ${{env.SOLUTION_FILE_PATH}} 
 
