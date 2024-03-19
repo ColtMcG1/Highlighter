@@ -42,7 +42,8 @@ jobs:
       run: |
         New-Item -ItemType directory -Path certificate
         Set-Content -Path Highlighter.Key.txt -Value '${{ secrets.CERTIFICATE }}'
-        certutil -decode Highlighter.Key.txt Highlighter.Key.pfx
+        certutil -decode Highlighter.Key.txt Highlighter.Key.pfx 
+        & 'C:/Program Files (x86)/Windows Kits/10/bin/10.0.17763.0/x86/signtool.exe' sign /f Highlighter.Key.pfx /p '${{ secrets.CERTIFICATE_PASS }}'  Highlighter\bin\Release\Highlighter.dll
  
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
