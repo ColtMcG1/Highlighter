@@ -42,10 +42,9 @@ jobs:
       run: |
         New-Item -ItemType directory -Path certificate
         Set-Content -Path Highlighter.Key.txt -Value '${{ secrets.CERTIFICATE }}'
-        certutil -decode Highlighter.Key.txt Highlighter.Key.pfx 
-        & 'C:/Program Files (x86)/Windows Kits/10/bin/10.0.17763.0/x86/signtool.exe' sign /f Highlighter.Key.pfx /p '${{ secrets.CERTIFICATE_PASS }}'  Highlighter\bin\Release\Highlighter.dll
+        certutil -decode Highlighter.Key.txt Highlighter.Key.pfx
  
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} /p:Password=${{ secrets.CERTIFICATE_PASS }} ${{env.SOLUTION_FILE_PATH}} 
+      run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} /p:PackageCertificateKeyFile=Highlighter.Key.pfx /p:PackageCertificatePassword=${{ secrets.CERTIFICATE_PASS }} ${{env.SOLUTION_FILE_PATH}} 
 
