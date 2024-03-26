@@ -2,7 +2,7 @@
   Highlighter
 </h1>
 
-<img src="https://img.shields.io/github/release/ColtMcG1/Highlighter/all.svg" alt="Latest release" />
+[![image](https://img.shields.io/github/release/ColtMcG1/Highlighter/all.svg)](https://github.com/ColtMcG1/Highlighter/releases/)
 
 # Installation
 1. Right-click and select properties.
