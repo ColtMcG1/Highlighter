@@ -31,7 +31,7 @@ namespace Highlighter {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         public HighlighterWork(global::Microsoft.Office.Tools.Excel.ApplicationFactory factory, global::System.IServiceProvider serviceProvider) : 
-                base(factory, serviceProvider, "AddIn", "ThisAddIn") {
+                base(factory, serviceProvider, "AddIn", "HighlighterWork") {
             Globals.Factory = factory;
         }
         

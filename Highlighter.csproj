@@ -26,17 +26,17 @@
     <NoStandardLibraries>false</NoStandardLibraries>
     <RootNamespace>Highlighter</RootNamespace>
     <AssemblyName>Highlighter</AssemblyName>
-    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <DefineConstants>VSTO40;UseOfficeInterop</DefineConstants>
     <ResolveComReferenceSilent>true</ResolveComReferenceSilent>
     <IsWebBootstrapper>False</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
     <BootstrapperComponentsUrl>C:\Users\coltm\OneDrive\Documents\Highlighter</BootstrapperComponentsUrl>
     <PublishUrl>C:\Users\coltm\OneDrive\Documents\Highlighter\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.0.4</ApplicationVersion>
+    <ApplicationVersion>1.0.0.6</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -49,9 +49,9 @@
     <LoadBehavior>3</LoadBehavior>
   </PropertyGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.8.1">
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.8.1 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -293,7 +293,7 @@
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
         <ProjectProperties HostName="Excel" HostPackage="{29A7B9D7-A7F1-4328-8EF0-6B2D1A56B2C1}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="Excel" Language="cs" TemplatesPath="" DebugInfoExeName="#Software\Microsoft\Office\16.0\Excel\InstallRoot\Path#excel.exe" DebugInfoCommandLine="/x" AddItemTemplatesGuid="{51063C3A-E220-4D12-8922-BDA915ACD783}" />
         <Host Name="Excel" GeneratedCodeNamespace="Highlighter" PublishedHash="69C324AB27932AA2FBF2B7EA72250886FF164DE6" IconIndex="0">
-          <HostItem Name="ThisAddIn" Code="Highlighter.cs" CanonicalName="AddIn" PublishedHash="60B02344689A1FB57FEA74141B0C19D20E77D4BD" CanActivate="false" IconIndex="1" Blueprint="Highlighter.Designer.xml" GeneratedCode="Highlighter.Designer.cs" />
+          <HostItem Name="ThisAddIn" Code="Highlighter.cs" CanonicalName="AddIn" PublishedHash="3CEFCEFC4AF85C7AE273AC9553604D6BCE9FD79F" CanActivate="false" IconIndex="1" Blueprint="Highlighter.Designer.xml" GeneratedCode="Highlighter.Designer.cs" />
         </Host>
       </FlavorProperties>
     </VisualStudio>
